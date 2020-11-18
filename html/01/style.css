@@ -1,0 +1,102 @@
+.header {
+  margin: 0px;
+  width: 100%;
+  background-color: #186cf2;
+  height: 75px;
+}
+
+
+.brand a img {
+  height: inherit;
+  width: inherit;
+}
+
+.nav {
+  list-style-type: none;
+  text-align: center;
+  float: right;
+  
+  position: relative;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+
+}
+
+.nav li a {
+  color: #ffffff;
+}
+
+.logo-img {
+  float: left;
+  position: relative;
+  margin: 10px 15px 15px 10px;
+}
+
+.container{
+  width: 100%;
+  background-color: #8a8585b0;
+  height: 30%;
+  margin: 10px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
+}
+
+.banner{
+  text-align: center;
+  color: #000000d7;
+  
+}
+
+.punchline{
+  margin: 10px;
+}
+
+.service {
+  display: inline-block;
+  width: 25%;
+  background-color: #9fa09f;
+  text-align: center;
+  position: relative;
+  height: 100px;
+  padding: 10px 10px 10px 10px;
+}
+
+.client-logos {
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  background-color: #c9c9ca;
+}
+.service {
+  display: inline-block;
+  width: 25%;
+  background-color: #9fa09f;
+  text-align: center;
+  position: relative;
+  height: 100px;
+  padding: 10px 10px 10px 10px;
+}
+
+.client-logos {
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  background-color: #c9c9ca;
+}
