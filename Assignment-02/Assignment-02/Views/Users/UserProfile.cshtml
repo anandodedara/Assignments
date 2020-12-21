@@ -1,0 +1,81 @@
+﻿@model Assignment_02.Models.User
+
+@{
+    ViewBag.Title = "Welcome";
+}
+<div class="row">
+    <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 mx-auto">
+
+                <!-- form card login -->
+                <div class="card rounded shadow shadow-sm">
+                    <div class="card-header">
+                        <h3 class="mb-0">Welcome</h3>
+                        @Html.ActionLink("Edit","Edit",null,new { @class="float-right" })
+                    </div>
+                    <div class="card-body">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.FirstName)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.FirstName)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.LastName)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.LastName)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Email)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Mobile)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Mobile)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.DateOfBirth)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.DateOfBirth)
+                            </dd>
+
+
+
+                        </dl>
+                    </div>
+                    <!--/card-block-->
+                </div>
+                <!-- /form card login -->
+
+            </div>
+
+
+        </div>
+        <!--/row-->
+
+    </div>
+    <!--/col-->
+</div>
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

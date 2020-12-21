@@ -1,0 +1,54 @@
+﻿@model Assignment_02.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<div class="row">
+    <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 mx-auto">
+
+                <!-- form card login -->
+                <div class="card rounded shadow shadow-sm">
+                    <div class="card-header">
+                        <h3 class="mb-0">Login</h3>
+                    </div>
+                    <div class="card-body">
+                        @using (Html.BeginForm("Login", "Users", FormMethod.Post, new { @id = "loginForm" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" });
+                            <div class="editor-label">
+                                @Html.LabelFor(user => user.Email)
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(user => user.Email, new { @class = "form-control form-control-lg rounded-0" })
+                                @Html.ValidationMessageFor(user => user.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="editor-label">@Html.LabelFor(user => user.Password)</div>
+                            <div class="editor-field">
+                                @Html.PasswordFor(user => user.Password, new { @class = "form-control form-control-lg rounded-0" })
+                                @Html.ValidationMessageFor(user => user.Password, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                        }
+                        @Html.ActionLink("Don't Have an Account?","Create")
+                    </div>
+                    <!--/card-block-->
+                </div>
+                <!-- /form card login -->
+
+            </div>
+
+
+        </div>
+        <!--/row-->
+
+    </div>
+    <!--/col-->
+</div>
+<!--/row-->
