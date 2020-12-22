@@ -81,3 +81,5 @@ G:\VSCode Project\Assignment-02\Assignment-02\obj\Debug\Assignment-02.csproj.Cop
 G:\VSCode Project\Assignment-02\Assignment-02\obj\Debug\Assignment-02.dll
 G:\VSCode Project\Assignment-02\Assignment-02\obj\Debug\Assignment-02.pdb
 G:\VSCode Project\Assignment-02\Assignment-02\obj\Debug\Assignment-02.csprojAssemblyReference.cache
+G:\VSCode Project\Assignment-02\Assignment-02\bin\NLog.dll
+G:\VSCode Project\Assignment-02\Assignment-02\bin\NLog.xml

@@ -12,12 +12,15 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using Assignment_02.Models;
+using NLog;
 
 namespace Assignment_02.Controllers
 {
     public class UsersController : Controller
     {
         private UsersDb db = new UsersDb();
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+        
 
         // GET: Users
         public ActionResult Index()
@@ -36,8 +39,13 @@ namespace Assignment_02.Controllers
             {
                 String encPassword = GetMD5(password);
                 var user = db.Users.FirstOrDefault(u => u.Email == email && u.Password.Equals(encPassword));
-                    if (user != null)
+                    if (user != null) {
+                        logger.Info("Already logged in."+user.Email+" | Session ID= "+Session.SessionID + Environment.NewLine + DateTime.Now);
                         return user;
+                    }
+                    else
+                        logger.Error("Login Failed!"+ email + Environment.NewLine + DateTime.Now);
+                    
             }
             return null;
         }
