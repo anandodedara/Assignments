@@ -16,12 +16,14 @@ using NLog;
 
 namespace Assignment_02.Controllers
 {
+    [HandleError]
     public class UsersController : Controller
     {
         private UsersDb db = new UsersDb();
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        
 
+
+        
         // GET: Users
         public ActionResult Index()
         {
@@ -114,22 +116,28 @@ namespace Assignment_02.Controllers
         // GET: Users/Edit/5
         public ActionResult Edit()
         {
-            int id = Int16.Parse(Session["id"].ToString());
-            if (id == null)
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                int id = Int16.Parse(Session["id"].ToString());
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                User user = db.Users.Find(id);
+                if (user == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(user);
             }
-            User user = db.Users.Find(id);
-            if (user == null)
-            {
-                return HttpNotFound();
+            catch (Exception exc) {
+                logger.Error(exc);
+                return RedirectToAction("Index");
             }
-            return View(user);
+            
         }
 
-        // POST: Users/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,Email,Mobile,DateOfBirth,Password")] User user)
