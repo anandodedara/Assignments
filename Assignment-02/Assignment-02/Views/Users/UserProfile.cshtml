@@ -10,9 +10,11 @@
 
                 <!-- form card login -->
                 <div class="card rounded shadow shadow-sm">
-                    <div class="card-header">
-                        <h3 class="mb-0">Welcome</h3>
-                        @Html.ActionLink("Edit","Edit",null,new { @class="float-right" })
+                    <div class="card-header d-flex d-inline">
+                        <h3 class="mb-0">Welcome, @Html.DisplayFor(model => model.FirstName)!</h3>
+                        <span class="d-flex ml-auto">
+                            @Html.ActionLink("Edit Profile","Edit")
+                        </span>
                     </div>
                     <div class="card-body">
                         <dl class="dl-horizontal">
@@ -74,8 +76,3 @@
     <!--/col-->
 </div>
 
-
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

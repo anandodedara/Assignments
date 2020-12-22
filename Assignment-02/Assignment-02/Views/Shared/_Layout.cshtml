@@ -13,10 +13,18 @@
             <div class="navbar-header">
                 @Html.ActionLink("DemoApplication", "Index", "Users", new { area = "" }, new { @class = "navbar-brand text-white" })
             </div>
-            <div class="navbar-nav ml-auto">
-                @Html.ActionLink("Logout", "Logout", "Users", new { area = "" }, new { @class = "text-white disable" })
-            </div>
-            
+            @{
+                if (Session["email"] != null)
+                {
+                    <text>
+
+                        <div class="navbar-nav ml-auto">
+                            @Html.ActionLink("Logout", "Logout", "Users", new { area = "" }, new { @class = "text-white" })
+                        </div>
+                    </text>
+                }
+            }
+
         </div>
     </div>
     <div class="container body-content">
@@ -30,6 +38,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/Scripts/js/validations.js")
+    
     @RenderSection("scripts", required: false)
 </body>
 </html>
