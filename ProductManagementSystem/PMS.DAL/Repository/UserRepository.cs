@@ -20,7 +20,14 @@ namespace PMS.DAL.Repository
 
         public void RegisterNewUser(Models.User user)
         {
-            throw new NotImplementedException();
+            _dbContext.Users.Add(new Database.User() { 
+                CreatedDate = DateTime.Now,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Password = user.Password
+            });
+            _dbContext.SaveChanges();
         }
 
         public Models.User ValidateUser(string email, string password)
@@ -30,6 +37,7 @@ namespace PMS.DAL.Repository
             if (dbUser != null)
                 return new Models.User()
                 {
+                    Id = dbUser.Id,
                     Email = dbUser.Email,
                     FirstName = dbUser.FirstName,
                     LastName = dbUser.LastName
@@ -38,5 +46,6 @@ namespace PMS.DAL.Repository
                 return null;
                 
         }
+
     }
 }

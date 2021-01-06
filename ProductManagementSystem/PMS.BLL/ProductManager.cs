@@ -4,7 +4,7 @@ using PMS.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Web.Mvc;
+using System.Web;
 
 namespace PMS.BLL
 {
@@ -12,15 +12,13 @@ namespace PMS.BLL
     {
         private readonly IProductRepository _productRepository;
         
+        
 
         public ProductManager(IProductRepository productRepository)
         {
             _productRepository = productRepository;
             
         }
-
-       
-
 
         public int CreateProduct(Product product)
         {
@@ -50,7 +48,6 @@ namespace PMS.BLL
                 product.LargeImageFile.SaveAs(fullpath);
 
             }
-
 
             product.CreateDate = DateTime.Now;
             product.UpdateDate = DateTime.Now;
@@ -114,7 +111,6 @@ namespace PMS.BLL
                 product.SmallImageURL = smallImagePath + filename;
                 product.SmallImageFile.SaveAs(fullpath);
 
-
             }
             else
                 return 1;
@@ -129,13 +125,17 @@ namespace PMS.BLL
 
             }
 
+
             
             product.UpdateDate = DateTime.Now;
-            //TODO: Set Created by and Updated by after login
-            product.CreatedBy = 1;
-            product.UpdatedBy = 1;
+            product.UpdatedBy = ((Models.User)HttpContext.Current.Session["UserDetails"]).Id;
 
             return _productRepository.UpdateProduct(product);
         }
+
+        
+       
     }
+
+
 }

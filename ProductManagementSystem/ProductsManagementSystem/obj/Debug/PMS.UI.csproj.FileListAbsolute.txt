@@ -1,0 +1,2 @@
+G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\obj\Debug\PMS.UI.csproj.CoreCompileInputs.cache
+G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\obj\Debug\PMS.UI.csprojAssemblyReference.cache

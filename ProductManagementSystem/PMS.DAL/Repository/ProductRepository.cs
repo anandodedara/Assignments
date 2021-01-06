@@ -10,7 +10,7 @@ namespace PMS.DAL.Repository
     public class ProductRepository : IProductRepository
     {
         private readonly PMSDatabaseEntities _dbContext;
-
+        
         public ProductRepository()
         {
             _dbContext = new PMSDatabaseEntities();
@@ -100,13 +100,11 @@ namespace PMS.DAL.Repository
 
         public Database.Product GetProductByID(int productID)
         {
-            if (productID != null) 
-            {
                 Product Product;
                 Product = _dbContext.Products.Find(productID);
                 return Product;
-            }
-            return null;
+            
+            
         }
 
 
@@ -138,7 +136,7 @@ namespace PMS.DAL.Repository
             Database.Product updateItem = new Database.Product() { 
                 Id = product.Id,
                 CategoryId = product.CategoryId,
-                CreatedBy = product.CreatedBy,
+                CreatedBy = GetProductByID(product.Id).CreatedBy,
                 CreateDate = GetProductByID(product.Id).CreateDate,
                 LargeImageURL = product.LargeImageURL,
                 LongDescription = product.LongDescription,
@@ -159,6 +157,12 @@ namespace PMS.DAL.Repository
             }
             return 0;
             
+        }
+
+
+        public int getUserIdByEmail(string email)
+        {
+            return _dbContext.Users.Where(user => user.Email == email).FirstOrDefault().Id;
         }
     }
 }

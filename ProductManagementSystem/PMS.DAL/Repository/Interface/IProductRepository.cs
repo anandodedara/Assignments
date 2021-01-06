@@ -18,5 +18,7 @@ namespace PMS.DAL.Repository.Interface
         int DeleteMultipleProduct(int[] productIDList);
         List<Models.Category> GetCategories();
         DAL.Database.Product MapProductModelToProductContext(Models.Product productsModel);
+
+        int getUserIdByEmail(string email);
     }
 }

@@ -9,6 +9,9 @@ namespace PMS.Models
 {
     public class User
     {
+
+        public int Id { get; set; }
+
         [Required(ErrorMessage ="Please enter First Name.")]
         [Display(Name ="First Name")]
         [MaxLength(50,ErrorMessage ="First Name can be contain maximum 50 charecters.")]
@@ -30,5 +33,10 @@ namespace PMS.Models
         [MaxLength(30, ErrorMessage = "Password must between 6 to 30 charecters.")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        
+        [Compare("Password")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm Password")]
+        public string RePassword { get; set; }
     }
 }

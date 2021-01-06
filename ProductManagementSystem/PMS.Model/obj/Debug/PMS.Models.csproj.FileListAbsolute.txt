@@ -10,15 +10,4 @@ G:\Gateway Assignment\ProductsManagementSystem\PMS.Model\obj\Debug\PMS.Models.cs
 G:\Gateway Assignment\ProductsManagementSystem\PMS.Model\obj\Debug\PMS.Models.csproj.CopyComplete
 G:\Gateway Assignment\ProductsManagementSystem\PMS.Model\obj\Debug\PMS.Model.dll
 G:\Gateway Assignment\ProductsManagementSystem\PMS.Model\obj\Debug\PMS.Model.pdb
-G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\PMS.Model.dll
-G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\PMS.Model.pdb
-G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\PMS.DAL.dll
-G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\EntityFramework.dll
-G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\PMS.DAL.pdb
-G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\PMS.DAL.dll.config
-G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\EntityFramework.xml
-G:\VSCode Project\ProductManagementSystem\PMS.Model\obj\Debug\PMS.Models.csprojAssemblyReference.cache
 G:\VSCode Project\ProductManagementSystem\PMS.Model\obj\Debug\PMS.Models.csproj.CoreCompileInputs.cache
-G:\VSCode Project\ProductManagementSystem\PMS.Model\obj\Debug\PMS.Models.csproj.CopyComplete
-G:\VSCode Project\ProductManagementSystem\PMS.Model\obj\Debug\PMS.Model.dll
-G:\VSCode Project\ProductManagementSystem\PMS.Model\obj\Debug\PMS.Model.pdb
