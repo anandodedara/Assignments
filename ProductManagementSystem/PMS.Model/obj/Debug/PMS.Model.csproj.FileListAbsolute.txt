@@ -1,0 +1,5 @@
+G:\Gateway Assignment\ProductsManagementSystem\PMS.Model\bin\Debug\PMS.Model.dll
+G:\Gateway Assignment\ProductsManagementSystem\PMS.Model\bin\Debug\PMS.Model.pdb
+G:\Gateway Assignment\ProductsManagementSystem\PMS.Model\obj\Debug\PMS.Model.csproj.CoreCompileInputs.cache
+G:\Gateway Assignment\ProductsManagementSystem\PMS.Model\obj\Debug\PMS.Model.dll
+G:\Gateway Assignment\ProductsManagementSystem\PMS.Model\obj\Debug\PMS.Model.pdb

@@ -1,0 +1,137 @@
+﻿@model IEnumerable<PMS.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    { if (TempData["message"] as string != null) {
+        <text>
+            <div class="alert alert-dismissible alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <h4 class="alert-heading"><i class="fa fa-bell"></i>Notification!</h4>
+                <p class="mb-0">@TempData["message"].ToString()</p>
+            </div>
+        </text>
+            }
+        }
+}
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Product", "AddProduct")
+</p>
+<div class="table-responsive">
+
+
+
+    <table id="myTable" class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" id="chkSelectAll" />
+                    <button disabled type="button" class="btn btn-danger" id="multipleDeleteBtn"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SmallImageURL)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShortDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LongDescription)
+                </th>
+
+
+                <th></th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <input name="rowCheckBox" id="rowCheckBox" type="checkbox" class="checkbox" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        <img id="smallImage" name="smallImage" src="@Url.Content(item.SmallImageURL)" class="img-thumbnail" height="100" width="100" data-toggle="modal" data-target="#largeImageModalCenter"
+                             @{ if (item.LargeImageURL != null) { <text>  data-whatever="@Url.Content(item.LargeImageURL)" </text> } else { <text> data-whatever="not available" </text> } }>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShortDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LongDescription)
+                    </td>
+
+
+                    <td>
+
+                        <div class="d-flex d-inline-block m-0">
+
+                            @using (Html.BeginForm("EditProduct", "Products", FormMethod.Post, new { id = "editForm", @class = "form-inline" }))
+                            {
+                                @Html.Hidden("id", item.Id)
+                                <button type="submit" class="btn btn-primary" id="editBtn"><i class="fa fa-edit" aria-hidden="true"></i></button>
+                            }
+
+                            @using (Html.BeginForm("DeleteProduct", "Products", FormMethod.Post, new { id = "deleteForm", @class = "form-inline" }))
+                            {
+                                @Html.AntiForgeryToken();
+                                @Html.Hidden("id", item.Id)
+                                <button type="submit" class="btn btn-danger" id="removeBtn"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            }
+
+
+                        </div>
+
+
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+
+    </table>
+
+
+
+</div>
+
+<div class="modal fade" id="largeImageModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img class="card-img" id="largeImage" src="" />
+                <h5 id="ImageDescription"></h5>
+            </div>
+        </div>
+    </div>
+</div>

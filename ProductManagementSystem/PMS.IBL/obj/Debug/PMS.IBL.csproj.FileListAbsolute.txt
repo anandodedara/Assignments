@@ -1,0 +1,16 @@
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\PMS.IBL.dll
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\PMS.IBL.pdb
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\PMS.Model.dll
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\PMS.Model.pdb
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\obj\Debug\PMS.IBL.csprojAssemblyReference.cache
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\obj\Debug\PMS.IBL.csproj.CoreCompileInputs.cache
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\obj\Debug\PMS.IBL.csproj.CopyComplete
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\obj\Debug\PMS.IBL.dll
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\obj\Debug\PMS.IBL.pdb
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\PMSDatabase.mdf
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\PMSDatabase_log.ldf
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\PMS.DAL.dll
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\EntityFramework.dll
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\PMS.DAL.pdb
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\PMS.DAL.dll.config
+G:\Gateway Assignment\ProductsManagementSystem\PMS.IBL\bin\Debug\EntityFramework.xml
