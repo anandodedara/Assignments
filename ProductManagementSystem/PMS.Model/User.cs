@@ -30,6 +30,7 @@ namespace PMS.Models
 
         [Required(ErrorMessage = "Please enter Password.")]
         [Display(Name = "Password")]
+        [MinLength(6,ErrorMessage ="Password must 6 character long.")]
         [MaxLength(30, ErrorMessage = "Password must between 6 to 30 charecters.")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
@@ -37,6 +38,7 @@ namespace PMS.Models
         [Compare("Password")]
         [DataType(DataType.Password)]
         [Display(Name = "Confirm Password")]
+        [Required]
         public string RePassword { get; set; }
     }
 }

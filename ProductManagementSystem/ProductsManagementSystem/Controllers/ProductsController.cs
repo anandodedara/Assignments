@@ -1,9 +1,11 @@
-﻿using PMS.BLL;
+﻿using NLog;
+using PMS.BLL;
 using PMS.BLL.Interface;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace ProductsManagementSystem.Controllers
@@ -13,6 +15,8 @@ namespace ProductsManagementSystem.Controllers
     {
         private readonly IProductManager _productManager;
         private readonly List<PMS.Models.Category> categories;
+
+        public readonly Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         public ProductsController(IProductManager productManager)
         {
@@ -96,7 +100,7 @@ namespace ProductsManagementSystem.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteProduct(int id) {
-
+            
             _productManager.DeleteProduct(id);
             return RedirectToAction("Index");
         }
@@ -107,5 +111,10 @@ namespace ProductsManagementSystem.Controllers
             return RedirectToAction("Index");
         }
 
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            base.OnException(filterContext);
+            logger.Error(filterContext.Exception);
+        }
     }
 }

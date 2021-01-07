@@ -80,14 +80,14 @@
         <div class="form-group">
             @Html.LabelFor(model => model.SmallImageURL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="file" name="SmallImageFile" id="SmallImageFile" accept="image/*" required/>
+                <input type="file" name="SmallImageFile" id="SmallImageFile"  required/>
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.LargeImageURL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="file" name="LargeImageFile" id="LargeImageFile" accept="image/x-png,image/gif,image/jpeg" />
+                <input type="file" name="LargeImageFile" id="LargeImageFile" />
             </div>
         </div>
 

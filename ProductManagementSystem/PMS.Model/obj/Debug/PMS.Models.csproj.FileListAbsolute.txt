@@ -22,3 +22,5 @@ G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\PMS.DAL.pdb
 G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\PMS.DAL.dll.config
 G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\EntityFramework.xml
 G:\VSCode Project\ProductManagementSystem\PMS.Model\obj\Debug\PMS.Models.csproj.CopyComplete
+G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\NLog.dll
+G:\VSCode Project\ProductManagementSystem\PMS.Model\bin\Debug\NLog.xml

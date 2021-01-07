@@ -100,3 +100,5 @@ G:\VSCode Project\ProductManagementSystem\PMS.BLL\bin\Debug\Unity.Container.pdb
 G:\VSCode Project\ProductManagementSystem\PMS.BLL\obj\Debug\PMS.BLL.csproj.CopyComplete
 G:\VSCode Project\ProductManagementSystem\PMS.BLL\obj\Debug\PMS.BLL.dll
 G:\VSCode Project\ProductManagementSystem\PMS.BLL\obj\Debug\PMS.BLL.pdb
+G:\VSCode Project\ProductManagementSystem\PMS.BLL\bin\Debug\NLog.dll
+G:\VSCode Project\ProductManagementSystem\PMS.BLL\bin\Debug\NLog.xml

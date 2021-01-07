@@ -8,6 +8,7 @@ using System.Web.Security;
 
 namespace ProductsManagementSystem.Controllers
 {
+    [HandleError]
     public class UsersController : Controller
     {
 

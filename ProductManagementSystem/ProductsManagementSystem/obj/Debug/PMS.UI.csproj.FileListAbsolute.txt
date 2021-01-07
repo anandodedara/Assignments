@@ -101,6 +101,8 @@ G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\bin\PMS.DAL.d
 G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\obj\Debug\PMS.UI.csproj.CopyComplete
 G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\obj\Debug\ProductsManagementSystem.dll
 G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\obj\Debug\ProductsManagementSystem.pdb
+G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\bin\Database\PMSDatabase_log.ldf
+G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\bin\NLog.dll
+G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\bin\NLog.xml
 G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\bin\Database\PMSDatabase.ldf
 G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\bin\Database\PMSDatabase.mdf
-G:\VSCode Project\ProductManagementSystem\ProductsManagementSystem\bin\Database\PMSDatabase_log.ldf

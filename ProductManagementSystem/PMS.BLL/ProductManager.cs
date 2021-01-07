@@ -1,4 +1,5 @@
-﻿using PMS.BLL.Interface;
+﻿using NLog;
+using PMS.BLL.Interface;
 using PMS.DAL.Repository.Interface;
 using PMS.Models;
 using System;
@@ -11,8 +12,7 @@ namespace PMS.BLL
     public class ProductManager : IProductManager
     {
         private readonly IProductRepository _productRepository;
-        
-        
+        public readonly Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         public ProductManager(IProductRepository productRepository)
         {
@@ -22,41 +22,48 @@ namespace PMS.BLL
 
         public int CreateProduct(Product product)
         {
-            //TODO: Image upload and update url to product
-            string smallImagePath = "/App_Data/Upload/Images/Small/";
-            string largeImagePath = "../App_Data/Upload/Images/Large/";
-
-            if (product.SmallImageFile != null)
+            try
             {
-                String filename = product.Name + "_Small_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + Path.GetExtension(product.SmallImageFile.FileName);
-                string path = System.Web.HttpContext.Current.Server.MapPath(smallImagePath);
-                string fullpath = Path.Combine(path, filename);
-                product.SmallImageURL = smallImagePath + filename;
-                product.SmallImageFile.SaveAs(fullpath);
+                string smallImagePath = "/App_Data/Upload/Images/Small/";
+                string largeImagePath = "../App_Data/Upload/Images/Large/";
+
+                if (product.SmallImageFile != null)
+                {
+                    String filename = product.Name + "_Small_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + Path.GetExtension(product.SmallImageFile.FileName);
+                    string path = System.Web.HttpContext.Current.Server.MapPath(smallImagePath);
+                    string fullpath = Path.Combine(path, filename);
+                    product.SmallImageURL = smallImagePath + filename;
+                    product.SmallImageFile.SaveAs(fullpath);
 
 
+                }
+                else
+                    return 1;
+
+                if (product.LargeImageFile != null)
+                {
+                    String filename = product.Name + "_Large_" + DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + Path.GetExtension(product.LargeImageFile.FileName);
+                    string path = System.Web.HttpContext.Current.Server.MapPath(largeImagePath);
+                    string fullpath = Path.Combine(path, filename);
+                    product.LargeImageURL = largeImagePath + filename;
+                    product.LargeImageFile.SaveAs(fullpath);
+
+                }
+
+                product.CreateDate = DateTime.Now;
+                product.UpdateDate = DateTime.Now;
+                //TODO: Set Created by and Updated by after login
+                product.UpdatedBy = ((Models.User)HttpContext.Current.Session["UserDetails"]).Id;
+                product.CreatedBy = ((Models.User)HttpContext.Current.Session["UserDetails"]).Id;
+
+
+                return _productRepository.CreateProduct(product);
             }
-            else
+            catch (Exception exception)
+            {
+                logger.Error(exception);
                 return 1;
-
-            if (product.LargeImageFile != null)
-            {
-                String filename = product.Name + "_Large_" + DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + Path.GetExtension(product.LargeImageFile.FileName);
-                string path = System.Web.HttpContext.Current.Server.MapPath(largeImagePath);
-                string fullpath = Path.Combine(path, filename);
-                product.LargeImageURL = largeImagePath + filename;
-                product.LargeImageFile.SaveAs(fullpath);
-
             }
-
-            product.CreateDate = DateTime.Now;
-            product.UpdateDate = DateTime.Now;
-            //TODO: Set Created by and Updated by after login
-            product.CreatedBy = 1;
-            product.UpdatedBy = 1;
-            
-
-            return _productRepository.CreateProduct(product);
         }
 
         public int DeleteMultipleProduct(int[] productIDList)
@@ -99,38 +106,46 @@ namespace PMS.BLL
 
         public int UpdateProduct(Models.Product product)
         {
-
-            string smallImagePath = "/App_Data/Upload/Images/Small/";
-            string largeImagePath = "../App_Data/Upload/Images/Large/";
-
-            if (product.SmallImageFile != null)
+            try
             {
-                String filename = product.Name + "_Small_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + Path.GetExtension(product.SmallImageFile.FileName);
-                string path = System.Web.HttpContext.Current.Server.MapPath(smallImagePath);
-                string fullpath = Path.Combine(path, filename);
-                product.SmallImageURL = smallImagePath + filename;
-                product.SmallImageFile.SaveAs(fullpath);
+                //TODO: Delete old product image after successfully update
+                string smallImagePath = "/App_Data/Upload/Images/Small/";
+                string largeImagePath = "../App_Data/Upload/Images/Large/";
 
+                if (product.SmallImageFile != null)
+                {
+                    String filename = product.Name + "_Small_" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + Path.GetExtension(product.SmallImageFile.FileName);
+                    string path = System.Web.HttpContext.Current.Server.MapPath(smallImagePath);
+                    string fullpath = Path.Combine(path, filename);
+                    product.SmallImageURL = smallImagePath + filename;
+                    product.SmallImageFile.SaveAs(fullpath);
+
+                }
+                else
+                    return 1;
+
+                if (product.LargeImageFile != null)
+                {
+                    String filename = product.Name + "_Large_" + DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + Path.GetExtension(product.LargeImageFile.FileName);
+                    string path = System.Web.HttpContext.Current.Server.MapPath(largeImagePath);
+                    string fullpath = Path.Combine(path, filename);
+                    product.LargeImageURL = largeImagePath + filename;
+                    product.LargeImageFile.SaveAs(fullpath);
+
+                }
+
+
+
+                product.UpdateDate = DateTime.Now;
+                product.UpdatedBy = ((Models.User)HttpContext.Current.Session["UserDetails"]).Id;
+
+                return _productRepository.UpdateProduct(product);
             }
-            else
+            catch (Exception ex)
+            {
+                logger.Error(ex);
                 return 1;
-
-            if (product.LargeImageFile != null)
-            {
-                String filename = product.Name + "_Large_" + DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + Path.GetExtension(product.LargeImageFile.FileName);
-                string path = System.Web.HttpContext.Current.Server.MapPath(largeImagePath);
-                string fullpath = Path.Combine(path, filename);
-                product.LargeImageURL = largeImagePath + filename;
-                product.LargeImageFile.SaveAs(fullpath);
-
             }
-
-
-            
-            product.UpdateDate = DateTime.Now;
-            product.UpdatedBy = ((Models.User)HttpContext.Current.Session["UserDetails"]).Id;
-
-            return _productRepository.UpdateProduct(product);
         }
 
         

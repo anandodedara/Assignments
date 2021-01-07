@@ -1,4 +1,5 @@
-﻿using PMS.DAL.Database;
+﻿using NLog;
+using PMS.DAL.Database;
 using PMS.DAL.Repository.Interface;
 using PMS.Models;
 using System;
@@ -12,6 +13,8 @@ namespace PMS.DAL.Repository
     public class UserRepository : IUserRepository
     {
         private readonly PMSDatabaseEntities _dbContext;
+
+        public readonly Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         public UserRepository()
         {

@@ -50,6 +50,7 @@ namespace PMS.Models
 
         
         [Display(Name = "Small Image")]
+        [Required]
         public HttpPostedFileBase SmallImageFile { get; set; }
         [Display(Name = "Large Image")]
         public HttpPostedFileBase LargeImageFile { get; set; }

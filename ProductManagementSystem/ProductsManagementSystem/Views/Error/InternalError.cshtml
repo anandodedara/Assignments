@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>InternalError</title>
+</head>
+<body>
+    <div>
+        <h1>
+            Error 500
+        </h1>
+        <h2>
+            Internal server error
+        </h2>
+        <a href="@Url.Action("Index",new { controller="Products" })">Back to home</a>
+    </div>
+</body>
+</html>
