@@ -16,6 +16,7 @@ namespace PMS.BLL
 
         public ProductManager(IProductRepository productRepository)
         {
+            
             _productRepository = productRepository;
             
         }
@@ -55,7 +56,6 @@ namespace PMS.BLL
                 //TODO: Set Created by and Updated by after login
                 product.UpdatedBy = ((Models.User)HttpContext.Current.Session["UserDetails"]).Id;
                 product.CreatedBy = ((Models.User)HttpContext.Current.Session["UserDetails"]).Id;
-
 
                 return _productRepository.CreateProduct(product);
             }

@@ -1,0 +1,8 @@
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.DAL\bin\Debug\Database\HMSDatabase.mdf
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.DAL\bin\Debug\Database\HMSDatabase_log.ldf
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.DAL\bin\Debug\HMS.DAL.dll
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.DAL\bin\Debug\HMS.DAL.pdb
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.csprojAssemblyReference.cache
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.csproj.CoreCompileInputs.cache
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.dll
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.pdb

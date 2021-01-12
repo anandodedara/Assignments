@@ -43,7 +43,7 @@ namespace ProductsManagementSystem.Controllers
             else
             {
                 TempData["message"] = "Login Failed! Please enter valid credentials.";
-
+                TempData["messageType"] = "";
                 return View(user);
             }
         }

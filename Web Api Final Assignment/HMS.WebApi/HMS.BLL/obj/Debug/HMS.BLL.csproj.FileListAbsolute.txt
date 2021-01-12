@@ -1,0 +1,6 @@
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.BLL\bin\Debug\HMS.BLL.dll
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.BLL\bin\Debug\HMS.BLL.pdb
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.BLL\obj\Debug\HMS.BLL.csprojAssemblyReference.cache
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.BLL\obj\Debug\HMS.BLL.csproj.CoreCompileInputs.cache
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.BLL\obj\Debug\HMS.BLL.dll
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.BLL\obj\Debug\HMS.BLL.pdb

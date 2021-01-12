@@ -1,0 +1,13 @@
+------Error(2021-01-12 21:36:41.3147)LAPTOP-3G8BE2VI------
+
+                      Exception Type:System.NullReferenceException |
+                      Url :  |
+                      
+                       |
+                      User Agent :  |
+                      User : auth:Forms:abc@abc.com |
+                      Exception Message:Object reference not set to an instance of an object. |
+                      Stack Trace: |
+                      Additional Info:System.NullReferenceException: Object reference not set to an instance of an object.
+   at PMS.BLL.ProductManager.CreateProduct(Product product) in G:\VSCode Project\ProductManagementSystem\PMS.BLL\ProductManager.cs:line 57
+

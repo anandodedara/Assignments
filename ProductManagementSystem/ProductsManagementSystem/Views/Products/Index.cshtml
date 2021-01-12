@@ -1,17 +1,21 @@
 ﻿@model IEnumerable<PMS.Models.Product>
 
 @{
-    ViewBag.Title = "Products List";
-    { if (TempData["message"] as string != null) {
-        <text>
-            <div class="alert alert-dismissible alert-success">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <h4 class="alert-heading"><i class="fa fa-bell"></i>Notification!</h4>
-                <p class="mb-0">@TempData["message"].ToString()</p>
-            </div>
-        </text>
-            }
+        ViewBag.Title = "Products List";
+        {
+            if (TempData["message"] as string != null)
+            {
+                var message = TempData["message"].ToString();
+                var messageType = TempData["messageType"].ToString();
+            <text>
+                <div class="alert alert-dismissible alert-success">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4 class="alert-heading"><i class="fa fa-check "></i>Success!</h4>
+                    <p class="mb-0">@TempData["message"].ToString()</p>
+                </div>
+            </text>
         }
+    }
 }
 
 <div class="table-responsive m-3">
@@ -66,7 +70,7 @@
                     </td>
                     <td>
                         <img id="smallImage" name="smallImage" src="@Url.Content(item.SmallImageURL)" class="img-thumbnail" height="100" width="100" data-toggle="modal" data-target="#largeImageModalCenter"
-                             @{ if (item.LargeImageURL != null) { <text>  data-whatever="@Url.Content(item.LargeImageURL)" </text> } else { <text> data-whatever="not available" </text> } }>
+                             @{ if (item.LargeImageURL != null) { <text> data-whatever="@Url.Content(item.LargeImageURL)" </text>  } else { <text> data-whatever="not available" </text>  } }>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.CategoryName)
@@ -99,6 +103,7 @@
                             {
                                 @Html.AntiForgeryToken();
                                 @Html.Hidden("id", item.Id)
+                                @Html.Hidden("name",item.Name);
                                 <button type="submit" class="btn btn-danger" id="removeBtn"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                             }
 

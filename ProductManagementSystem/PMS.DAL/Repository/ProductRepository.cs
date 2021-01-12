@@ -22,6 +22,7 @@ namespace PMS.DAL.Repository
 
         public int CreateProduct(Models.Product product)
         {
+            
             try
             {
                 if (product != null)

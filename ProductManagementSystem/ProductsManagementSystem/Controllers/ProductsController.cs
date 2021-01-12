@@ -20,6 +20,7 @@ namespace ProductsManagementSystem.Controllers
 
         public ProductsController(IProductManager productManager)
         {
+            
             _productManager = productManager;
             categories = (List<PMS.Models.Category>)_productManager.GetCategories();
             
@@ -40,9 +41,7 @@ namespace ProductsManagementSystem.Controllers
         //Create new product view
         public ActionResult AddProduct()
         {
-            #region
-                ViewBag.categoriesList = categories;
-            #endregion
+            
             return View();
         }
 
@@ -53,7 +52,9 @@ namespace ProductsManagementSystem.Controllers
             if (ModelState.IsValid)
             {
                 _productManager.CreateProduct(product);
+
                 return RedirectToAction("Index");
+                
             }
             else {
                 //Categories list for dropdown menu
@@ -68,12 +69,6 @@ namespace ProductsManagementSystem.Controllers
         public ActionResult EditProduct(int id) {
 
             PMS.Models.Product product = _productManager.GetProductByID(id);
-            
-            #region
-            ViewBag.categoriesList = categories;
-            #endregion
-            string date = product.CreateDate.ToString();
-                        
             return View(product);
         }
 
@@ -84,7 +79,6 @@ namespace ProductsManagementSystem.Controllers
             
             if (ModelState.IsValid)
             {
-                
                 _productManager.UpdateProduct(product);
                 return RedirectToAction("Index");
             }
@@ -99,15 +93,18 @@ namespace ProductsManagementSystem.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteProduct(int id) {
+        public ActionResult DeleteProduct(int id, string name) {
             
             _productManager.DeleteProduct(id);
+            TempData["message"] = name + " deleted successfully.";
+            TempData["messageType"] = "";
             return RedirectToAction("Index");
         }
 
         public ActionResult DeleteMultiple(int[] list) {
             _productManager.DeleteMultipleProduct(list);
             TempData["message"] = list.Length + "Products deleted successfully.";
+            TempData["messageType"] = "";
             return RedirectToAction("Index");
         }
 
