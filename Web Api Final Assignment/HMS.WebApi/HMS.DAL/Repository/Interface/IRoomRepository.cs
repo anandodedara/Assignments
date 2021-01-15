@@ -11,7 +11,7 @@ namespace HMS.DAL.Repository.Interface
     {
         Room GetRoom(int id);
         string CreateRoom(Room room);
-        IQueryable<Room> GetRooms(string city=null,int? pincode=0, int? price=0, short? category=0);
+        IQueryable<Room> GetRooms(string city=null,int? pincode=0, decimal? price=0, Room.RoomCategory category=0);
         bool CheckAvailability(int roomId, DateTime date);
     }
 }

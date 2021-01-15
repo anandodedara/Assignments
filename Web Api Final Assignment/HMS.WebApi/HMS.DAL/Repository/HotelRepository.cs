@@ -39,7 +39,6 @@ namespace HMS.DAL.Repository
                 
                 Database.Hotel entry =_mapper.Map<Models.Hotel,Database.Hotel>(hotel);
 
-                //Adding data for project-specific fields
                 entry.CreatedDate = DateTime.Today;
                 entry.CreatedBy = 1;
 
