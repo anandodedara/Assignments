@@ -124,7 +124,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutomapperConfig\MapperConfig.cs" />
     <Compile Include="Database\Booking.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
@@ -150,8 +149,12 @@
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BookingRepository.cs" />
     <Compile Include="Repository\HotelRepository.cs" />
+    <Compile Include="Repository\Interface\IBookingRepository.cs" />
     <Compile Include="Repository\Interface\IHotelRepository.cs" />
+    <Compile Include="Repository\Interface\IRoomRepository.cs" />
+    <Compile Include="Repository\RoomRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\DatabaseModel.Context.tt">

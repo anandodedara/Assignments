@@ -14,10 +14,18 @@ namespace HMS.DAL.Database
     
     public partial class Booking
     {
+        public enum BookingStatus
+        {
+            Optional,
+            Definitive,
+            Cancelled,
+            Deleted
+        }
+
         public short Id { get; set; }
         public System.DateTime BookingDate { get; set; }
         public short RoomId { get; set; }
-        public string Status { get; set; }
+        public BookingStatus Status { get; set; }
     
         public virtual Room Room { get; set; }
     }

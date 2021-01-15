@@ -81,8 +81,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookingManager.cs" />
     <Compile Include="Helper\UnityRepositoryHelper.cs" />
     <Compile Include="HotelManager.cs" />
+    <Compile Include="Interface\IBookingManager.cs" />
     <Compile Include="Interface\IHotelManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

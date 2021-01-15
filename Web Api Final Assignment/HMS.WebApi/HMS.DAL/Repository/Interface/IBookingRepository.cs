@@ -9,10 +9,9 @@ namespace HMS.DAL.Repository.Interface
     public interface IBookingRepository
     {
         Booking GetBooking(int id);
-        string BookRoom(int roomId, DateTime bookingDate);
-        IQueryable<Booking> GetBookings();
+        string BookRoom(short roomId, DateTime bookingDate);
         string UpdateBooking(int bookingId, DateTime updatedDate);
-        string UpdateBookingStatus(int id, Status bookingStatus);
+        string UpdateBookingStatus(int id, BookingStatus bookingStatus);
         string DeleteBooking(int id);
     }
 }

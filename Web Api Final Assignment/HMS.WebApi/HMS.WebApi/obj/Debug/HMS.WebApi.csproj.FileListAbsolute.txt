@@ -107,3 +107,7 @@ G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.WebApi\obj\Debug\HMS.W
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.WebApi\obj\Debug\HMS.WebApi.pdb
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.WebApi\bin\EntityFramework.SqlServer.dll
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.WebApi\bin\EntityFramework.SqlServer.xml
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.WebApi\bin\Database\HMSDatabase.mdf
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.WebApi\bin\Database\HMSDatabase_log.ldf
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.WebApi\bin\HMSDatabase.mdf
+G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.WebApi\bin\HMSDatabase_log.ldf
