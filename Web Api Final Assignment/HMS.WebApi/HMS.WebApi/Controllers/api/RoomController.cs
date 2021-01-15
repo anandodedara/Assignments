@@ -1,14 +1,18 @@
 ﻿using HMS.BLL.Interface;
 using HMS.Models;
+using Microsoft.AspNetCore.Cors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
+using AuthorizeAttribute = System.Web.Http.AuthorizeAttribute;
 
 namespace HMS.WebApi.Controllers.api
 {
+    
+    [Authorize]
     public class RoomController : ApiController
     {
         private readonly IRoomManager _roomManager;
