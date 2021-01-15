@@ -1,6 +1,5 @@
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\bin\Debug\HMS.Models.dll
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\bin\Debug\HMS.Models.pdb
-G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.csprojAssemblyReference.cache
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.csproj.CoreCompileInputs.cache
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.dll
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.pdb
