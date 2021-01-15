@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Cors;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Mvc;
 
 namespace HMS.WebApi
@@ -13,9 +12,9 @@ namespace HMS.WebApi
             config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling
                 = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
-           
 
-            config.Formatters.Remove(config.Formatters.XmlFormatter); //To return JSON only
+            config.EnableCors();
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
 
 
 
