@@ -12,15 +12,19 @@ namespace HMS.DAL.Repository
 {
     public class BookingRepository : IBookingRepository
     {
-        private readonly Database.HMSDatabase _dbContext;
+        private readonly Database.HMSDatabaseEntities _dbContext;
         private readonly IMapper _mapper;
 
         public BookingRepository()
         {
-            _dbContext = new Database.HMSDatabase();
+            _dbContext = new Database.HMSDatabaseEntities();
 
             MapperConfiguration config = new MapperConfiguration(cfg =>
             {
+                cfg.CreateMap<Hotel, Database.Hotel>();
+                cfg.CreateMap<Database.Hotel, Hotel>();
+                cfg.CreateMap<Room, Database.Room>();
+                cfg.CreateMap<Database.Room, Room>();
                 cfg.CreateMap<Booking, Database.Booking>();
                 cfg.CreateMap<Database.Booking, Booking>();
             });
@@ -33,14 +37,14 @@ namespace HMS.DAL.Repository
             var isValidRoomId = _dbContext.Rooms.Where(b => b.Id == roomId).Single();
 
             //check if the room is already booked or not
-            int bookingCount = _dbContext.Bookings.Where(b => b.RoomId == roomId && b.BookingDate == bookingDate && b.Status != (Database.Booking.BookingStatus)BookingStatus.Deleted).Count();
+            int bookingCount = _dbContext.Bookings.Where(b => b.RoomId == roomId && b.BookingDate == bookingDate && b.Status != (byte)BookingStatus.Deleted).Count();
             if (bookingCount != 0)
                 return "Room is already booked on " + bookingDate;
 
             Database.Booking booking = new Database.Booking();
             booking.RoomId = roomId;
             booking.BookingDate = bookingDate;
-            booking.Status = Database.Booking.BookingStatus.Optional;
+            booking.Status = (byte)Database.Booking.BookingStatus.Optional;
 
             _dbContext.Bookings.Add(booking);
             _dbContext.SaveChanges();
@@ -56,7 +60,7 @@ namespace HMS.DAL.Repository
                 {
                     return null;
                 }
-                dbBooking.Status = Database.Booking.BookingStatus.Deleted;
+                dbBooking.Status = (byte)Database.Booking.BookingStatus.Deleted;
                 _dbContext.Entry(dbBooking).State = EntityState.Modified;
                 _dbContext.SaveChanges();
             }
@@ -86,12 +90,12 @@ namespace HMS.DAL.Repository
                     return $"No booking found for id: { bookingId}";
                 }
 
-                if (booking.Status == Database.Booking.BookingStatus.Deleted)
+                if (booking.Status == (byte)BookingStatus.Deleted)
                 {
                     return "This booking is already deleted.";
                 }
 
-                int bookingCount = _dbContext.Bookings.Where(b => b.Id == bookingId && b.BookingDate == updatedDate && b.Status != Database.Booking.BookingStatus.Deleted).Count();
+                int bookingCount = _dbContext.Bookings.Where(b => b.Id == bookingId && b.BookingDate == updatedDate && b.Status != (byte)BookingStatus.Deleted).Count();
 
                 if (bookingCount != 0)
                     return "The room is already booked on the specified date.";
@@ -118,10 +122,10 @@ namespace HMS.DAL.Repository
                     return null;
                 }
 
-                if (booking.Status == Database.Booking.BookingStatus.Deleted)
+                if (booking.Status == (byte)BookingStatus.Deleted)
                     return null;
 
-                booking.Status = (Database.Booking.BookingStatus)bookingStatus;
+                booking.Status = (byte)bookingStatus;
                 _dbContext.Entry(booking).State = EntityState.Modified;
                 _dbContext.SaveChanges();
             }

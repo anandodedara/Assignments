@@ -12,7 +12,7 @@
           <Property Name="Id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BookingDate" Type="date" Nullable="false" />
           <Property Name="RoomId" Type="smallint" Nullable="false" />
-          <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
         </EntityType>
         <EntityType Name="Hotels">
           <Key>
@@ -42,7 +42,7 @@
           <Property Name="HotelId" Type="smallint" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Category" Type="tinyint" Nullable="false" />
-          <Property Name="Price" Type="numeric" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
           <Property Name="CreatedDate" Type="date" Nullable="false" />
           <Property Name="CreatedBy" Type="smallint" Nullable="false" />
@@ -98,7 +98,7 @@
           <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BookingDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="RoomId" Type="Int16" Nullable="false" />
-          <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Status" Type="Byte" Nullable="false" />
           <NavigationProperty Name="Room" Relationship="Self.FK_RoomId_Id" FromRole="Bookings" ToRole="Room" />
         </EntityType>
         <EntityType Name="Hotel">
@@ -129,8 +129,8 @@
           <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="HotelId" Type="Int16" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Category" Type="Byte" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Category" Type="HMSDatabaseModel.RoomCategory" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="CreatedBy" Type="Int16" Nullable="false" />
@@ -163,7 +163,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="HMSDatabase" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="HMSDatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Bookings" EntityType="Self.Booking" />
           <EntitySet Name="Hotels" EntityType="Self.Hotel" />
           <EntitySet Name="Rooms" EntityType="Self.Room" />
@@ -176,12 +176,17 @@
             <End Role="Room" EntitySet="Rooms" />
           </AssociationSet>
         </EntityContainer>
+        <EnumType Name="RoomCategory" UnderlyingType="Byte">
+          <Member Name="Category1" Value="1" />
+          <Member Name="Category2" Value="2" />
+          <Member Name="Category3" Value="3" />
+        </EnumType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HMSDatabaseModelStoreContainer" CdmEntityContainer="HMSDatabase">
+        <EntityContainerMapping StorageEntityContainer="HMSDatabaseModelStoreContainer" CdmEntityContainer="HMSDatabaseEntities">
           <EntitySetMapping Name="Bookings">
             <EntityTypeMapping TypeName="HMSDatabaseModel.Booking">
               <MappingFragment StoreEntitySet="Bookings">

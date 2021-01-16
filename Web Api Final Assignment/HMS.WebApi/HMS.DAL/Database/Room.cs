@@ -43,7 +43,7 @@ namespace HMS.DAL.Database
         public short Id { get; set; }
         public short HotelId { get; set; }
         public string Name { get; set; }
-        public RoomCategory Category { get; set; }
+        public byte Category { get; set; }
         public decimal Price { get; set; }
         public bool IsActive { get; set; }
         public System.DateTime CreatedDate { get; set; }

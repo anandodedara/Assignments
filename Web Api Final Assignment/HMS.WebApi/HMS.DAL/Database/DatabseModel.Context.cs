@@ -13,10 +13,10 @@ namespace HMS.DAL.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class HMSDatabase : DbContext
+    public partial class HMSDatabaseEntities : DbContext
     {
-        public HMSDatabase()
-            : base("name=HMSDatabase")
+        public HMSDatabaseEntities()
+            : base("name=HMSDatabaseEntities")
         {
         }
     

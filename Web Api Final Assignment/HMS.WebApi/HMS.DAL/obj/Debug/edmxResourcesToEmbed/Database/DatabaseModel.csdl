@@ -7,7 +7,7 @@
     <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="BookingDate" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="RoomId" Type="Int16" Nullable="false" />
-    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" />
     <NavigationProperty Name="Room" Relationship="Self.FK_RoomId_Id" FromRole="Bookings" ToRole="Room" />
   </EntityType>
   <EntityType Name="Hotel">

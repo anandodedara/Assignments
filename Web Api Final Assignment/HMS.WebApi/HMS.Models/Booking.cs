@@ -19,7 +19,7 @@ namespace HMS.Models
         public short Id { get; set; }
         public System.DateTime BookingDate { get; set; }
         public short RoomId { get; set; }
-        public BookingStatus Status { get; set; }
+        public byte Status { get; set; }
 
         public virtual Room Room { get; set; }
     }

@@ -12,8 +12,10 @@ namespace HMS.BLL.Helper
         {
             
             Container.RegisterType<IHotelRepository, HotelRepository>();
-            Container.RegisterType<IHotelManager,HotelManager>();
-            
+            Container.RegisterType<IBookingRepository, BookingRepository>();
+            Container.RegisterType<IRoomRepository, RoomRepository>();
+            //Container.RegisterType<IHotelManager,HotelManager>();
+
         }
     }
 }

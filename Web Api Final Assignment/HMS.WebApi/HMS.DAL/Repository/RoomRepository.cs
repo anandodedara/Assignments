@@ -12,25 +12,27 @@ namespace HMS.DAL.Repository
 {
     public class RoomRepository : IRoomRepository
     {
-        private readonly Database.HMSDatabase _dbContext;
+        private readonly Database.HMSDatabaseEntities _dbContext;
         private IMapper _mapper;
 
         public RoomRepository()
         {
-            _dbContext = new Database.HMSDatabase();
+            _dbContext = new Database.HMSDatabaseEntities();
             MapperConfiguration config = new MapperConfiguration(cfg =>
                                 {
+                                    cfg.CreateMap<Hotel, Database.Hotel>();
+                                    cfg.CreateMap<Database.Hotel, Hotel>();
                                     cfg.CreateMap<Room, Database.Room>();
                                     cfg.CreateMap<Database.Room, Room>();
-                                    cfg.CreateMap<Database.Booking, Booking>();
                                     cfg.CreateMap<Booking, Database.Booking>();
+                                    cfg.CreateMap<Database.Booking, Booking>();
                                 });
             _mapper = config.CreateMapper();
         }
         public bool CheckAvailability(int roomId, DateTime date)
         {
             var isValidRoomId = _dbContext.Rooms.Where(b => b.Id == roomId).Single(); //throws an exception if roomId is invalid
-            var bookingCount = _dbContext.Bookings.Where(b => b.RoomId == roomId && b.BookingDate == date && b.Status != (Database.Booking.BookingStatus)BookingStatus.Deleted).Count();
+            var bookingCount = _dbContext.Bookings.Where(b => b.RoomId == roomId && b.BookingDate == date && b.Status != (byte)BookingStatus.Deleted).Count();
             if (bookingCount != 0)
                 return false;
             return true;
@@ -75,7 +77,7 @@ namespace HMS.DAL.Repository
         {
 
             List<Room> roomList = new List<Room>();
-            IQueryable<Database.Room> rooms = _dbContext.Rooms.Where(r => (r.Price <= price || price == 0) && (r.Category == (Database.Room.RoomCategory)category || category == Room.RoomCategory.Cat0) && (r.Hotel.City == city || city == null) && (r.Hotel.PINCode == pincode || pincode == 0));
+            IQueryable<Database.Room> rooms = _dbContext.Rooms.Where(r => (r.Price <= price || price == 0) && (r.Category == (byte)Enum.Parse(typeof(Room.RoomCategory),category.ToString()) || category == Room.RoomCategory.Cat0) && (r.Hotel.City == city || city == null) && (r.Hotel.PINCode == pincode || pincode == 0));
             foreach (var item in rooms)
             {
                 roomList.Add(_mapper.Map<Database.Room, Room>(item));

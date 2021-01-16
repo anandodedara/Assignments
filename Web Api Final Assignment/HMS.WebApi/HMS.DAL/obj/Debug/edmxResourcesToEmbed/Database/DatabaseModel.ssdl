@@ -7,7 +7,7 @@
     <Property Name="Id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="BookingDate" Type="date" Nullable="false" />
     <Property Name="RoomId" Type="smallint" Nullable="false" />
-    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
   </EntityType>
   <EntityType Name="Hotels">
     <Key>

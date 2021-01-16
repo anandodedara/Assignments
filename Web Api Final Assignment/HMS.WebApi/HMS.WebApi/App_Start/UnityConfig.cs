@@ -16,6 +16,8 @@ namespace HMS.WebApi
 
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IHotelManager, HotelManager>();
+            container.RegisterType<IBookingManager, BookingManager>();
+            container.RegisterType<IRoomManager, RoomManager>();
             container.AddNewExtension<BLL.Helper.UnityRepositoryHelper>();
             
             GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
