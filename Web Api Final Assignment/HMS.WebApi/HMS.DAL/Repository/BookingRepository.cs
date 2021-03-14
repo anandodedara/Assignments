@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using HMS.DAL.Repository.Interface;
 using HMS.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -14,12 +16,12 @@ namespace HMS.DAL.Repository
     {
         private readonly Database.HMSDatabaseEntities _dbContext;
         private readonly IMapper _mapper;
-
+        private MapperConfiguration config;
         public BookingRepository()
         {
             _dbContext = new Database.HMSDatabaseEntities();
 
-            MapperConfiguration config = new MapperConfiguration(cfg =>
+            config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Hotel, Database.Hotel>();
                 cfg.CreateMap<Database.Hotel, Hotel>();
@@ -77,6 +79,14 @@ namespace HMS.DAL.Repository
             Database.Booking booking = _dbContext.Bookings.Find(id);
             return _mapper.Map<Booking>(booking);
             
+        }
+
+
+        public IQueryable<Models.Booking> GetBookings()
+        {
+
+            return _dbContext.Bookings.Where(b=>b.Status!=(byte)Database.Booking.BookingStatus.Deleted).AsQueryable().ProjectTo<Booking>(config);
+
         }
 
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,6 @@ namespace HMS.DAL.Repository.Interface
         string UpdateBooking(int bookingId, DateTime updatedDate);
         string UpdateBookingStatus(int id, BookingStatus bookingStatus);
         string DeleteBooking(int id);
+        IQueryable<Models.Booking> GetBookings();
     }
 }

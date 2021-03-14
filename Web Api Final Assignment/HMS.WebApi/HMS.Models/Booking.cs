@@ -21,6 +21,6 @@ namespace HMS.Models
         public short RoomId { get; set; }
         public byte Status { get; set; }
 
-        public virtual Room Room { get; set; }
+        //public virtual Room Room { get; set; }
     }
 }

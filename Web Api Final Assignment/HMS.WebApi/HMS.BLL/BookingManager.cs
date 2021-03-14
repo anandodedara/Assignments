@@ -2,6 +2,7 @@
 using HMS.DAL.Repository.Interface;
 using HMS.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,11 @@ namespace HMS.BLL
         public Booking GetBooking(int id)
         {
             return _bookingRepository.GetBooking(id);
+        }
+
+        public IQueryable<Models.Booking> GetBookings()
+        {
+            return _bookingRepository.GetBookings();
         }
 
         public string UpdateBooking(int bookingId, DateTime updatedDate)
