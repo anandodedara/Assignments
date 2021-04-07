@@ -11,7 +11,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void Convert_into_UpperCase_From_LowerCase()
+        public void Convert_To_UpperCase_From_LowerCase()
         {
             // Arrange
             string str= "anand";
@@ -30,7 +30,7 @@ namespace assignment2.Tests
         /// 
 
         [Fact]
-        public void Convert_into_UpperCase_From_MixedCase()
+        public void Convert_To_UpperCase_From_MixedCase()
         {
             // Arrange
             string str = "My nAme iS AnaND oDedaRa";
@@ -48,7 +48,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void Convert_into_LowerCase_From_UpperCase()
+        public void Convert_To_LowerCase_From_UpperCase()
         {
             // Arrange
             string str = "I AM LIVING IN PORBANDAR";
@@ -64,7 +64,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void Convert_into_LowerCase_From_MixedCase()
+        public void Convert_To_LowerCase_From_MixedCase()
         {
             // Arrange
             string str = "This iS ThE TeStCase of ConVert intO MiXEdCase froM LowerCAse";
@@ -81,7 +81,7 @@ namespace assignment2.Tests
 
         [Fact]
 
-        public void ToConvertInTitleCase()
+        public void Convert_To_TitleCase_From_LowerCase()
         {
             string str = "my name is anand odedara";
             string expectedResult = "My Name Is Anand Odedara";
@@ -96,7 +96,7 @@ namespace assignment2.Tests
 
         [Fact]
 
-        public void ToConvertInTitleCase_From_UpperCase()
+        public void Convert_To_TitleCase_From_UpperCase()
         {
             string str = "THIS IS TESTING ASSIGNMENT";
             string expectedResult = "This Is Testing Assignment";
@@ -110,7 +110,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void ToCheckLowerCase()
+        public void Check_If_LowerCase()
         {
             string str = "anand";
             bool result = str.CheckLowerCase();
@@ -122,7 +122,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void ToCheckUpperCase()
+        public void Check_If_UpperCase()
         {
             string str = "ANAND";
             bool result = str.CheckUpperCase();
@@ -134,7 +134,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void ToCapitalize()
+        public void Convert_To_Capitalize()
         {
             string str = "anand";
             string result = str.Capitalize();
@@ -146,7 +146,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void ToCheckNumeric_false()
+        public void Check_If_Not_Numeric()
         {
             string str = "anand";
             bool result = str.IsNumericValue();
@@ -158,7 +158,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void ToCheckNumeric_true()
+        public void Check_If_Numeric()
         {
             string str = "122";
             bool result = str.IsNumericValue();
@@ -170,7 +170,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void ToRemoveLastChar()
+        public void Remove_Last_Character()
         {
             string str = "anand";
             string result = str.ToRemoveLastCharachter();
@@ -182,7 +182,7 @@ namespace assignment2.Tests
         /// </summary>
 
         [Fact]
-        public void GetWordCount()
+        public void Get_Word_Count()
         {
             string str = "test test";
             int result = str.GetWordCount();
@@ -195,7 +195,7 @@ namespace assignment2.Tests
 
 
         [Fact]
-        public void ConvertStringToInt()
+        public void Convert_String_To_Int()
         {
             string str = "123456";
             int result = str.ConvertStringToInt();

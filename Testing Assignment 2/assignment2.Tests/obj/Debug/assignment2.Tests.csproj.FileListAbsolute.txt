@@ -64,3 +64,36 @@ D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\
 D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.csproj.CopyComplete
 D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.dll
 D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.pdb
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\csc.exe
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\vbc.exe
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.runner.reporters.net452.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.runner.utility.net452.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.abstractions.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\assignment2.Tests.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\assignment2.Tests.pdb
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\assignment2.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.assert.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.core.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.execution.desktop.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\assignment2.pdb
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\assignment2.dll.config
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.assert.xml
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.core.xml
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\bin\Debug\xunit.execution.desktop.xml
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\obj\Debug\assignment2.Tests.csprojAssemblyReference.cache
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\obj\Debug\assignment2.Tests.csproj.CoreCompileInputs.cache
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\obj\Debug\assignment2.Tests.csproj.CopyComplete
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\obj\Debug\assignment2.Tests.dll
+D:\.NET Assignments\Assignments\Testing Assignment 2\assignment2.Tests\obj\Debug\assignment2.Tests.pdb
