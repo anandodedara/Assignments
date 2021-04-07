@@ -21,15 +21,15 @@ namespace TestingPassengerDemo.Controllers
         }
 
         [HttpPost]
-        [Route("api/Passengers/PassengerRegistration")]
-        public Passenger PassengerRegistration([FromBody] Passenger model)
+        
+        public Passenger AddPassenger([FromBody] Passenger model)
         {
             return _passengerManager.PassengerRegistration(model);
         }
 
         [HttpPut]
-        [Route("api/Passengers/PassengerDetailsUpdate")]
-        public Passenger PassengerDetailsUpdate([FromBody] Passenger model)
+       
+        public Passenger UpdatePassenger([FromBody] Passenger model)
         {
 
             var result = _passengerManager.PassengerDetailsUpdate(model);
@@ -37,8 +37,8 @@ namespace TestingPassengerDemo.Controllers
         }
 
         [HttpDelete]
-        [Route("api/Passengers/PassengerDetailsDelete")]
-        public bool PassengerDetailsDelete(String id)
+        
+        public bool DeletePassenger(String id)
         {
 
             bool result = _passengerManager.PassengerDetailsDelete(id);
@@ -46,8 +46,8 @@ namespace TestingPassengerDemo.Controllers
         }
 
         [HttpGet]
-        [Route("api/Passengers/GetPassenger")]
-        public HttpResponseMessage GetPassenger(String id)
+       
+        public HttpResponseMessage GetPassengerById(String id)
         {
             if (id != null)
             {
@@ -76,7 +76,6 @@ namespace TestingPassengerDemo.Controllers
         }
 
         [HttpGet]
-        [Route("api/Passengers/getAllPassenger")]
         public IList<Passenger> getAllPassenger()
         {
             return _passengerManager.getAllPassenger();

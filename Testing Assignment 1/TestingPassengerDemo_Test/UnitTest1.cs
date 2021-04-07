@@ -50,7 +50,7 @@ namespace CLPM_Test
         public void Test_AddPassenger()
         {
             //Arrange
-            var newpassenger = new Passenger() { PassengerId = Convert.ToInt32(DateTime.Now.Ticks.ToString()), FirstName = "Test", LastName = "Test", PhoneNumber = "1234794616" };
+            var newpassenger = new Passenger() { PassengerId = Convert.ToInt32(DateTime.Now.Ticks.ToString()), FirstName = "Anand", LastName = "Odedara", PhoneNumber = "1564414465" };
             var response = mockDataRepo.Setup(x => x.PassengerRegistration(newpassenger)).Returns(AddPassenger());
             //Act
             var result = _passengerController.PassengerRegistration(newpassenger);
@@ -87,8 +87,8 @@ namespace CLPM_Test
         {
             IList<Passenger> passengers = new List<Passenger>()
             {
-                new Passenger(){PassengerId=Convert.ToInt32(DateTime.Now.Ticks.ToString()),FirstName="Test",LastName="Test",PhoneNumber="987644321"},
-                new Passenger(){PassengerId=Convert.ToInt32(DateTime.Now.Ticks.ToString()),FirstName="Test",LastName="Test",PhoneNumber="987654321"}
+                new Passenger(){PassengerId=Convert.ToInt32(DateTime.Now.Ticks.ToString()),FirstName="Anand",LastName="Odedara",PhoneNumber="1561561111"},
+                new Passenger(){PassengerId=Convert.ToInt32(DateTime.Now.Ticks.ToString()),FirstName="Anand",LastName="Odedara",PhoneNumber="1561311515"}
             };
             return passengers;
         }
@@ -96,7 +96,7 @@ namespace CLPM_Test
 
         private static Passenger AddPassenger()
         {
-            var passenger = new Passenger() { PassengerId = Convert.ToInt32(DateTime.Now.Ticks.ToString()), FirstName = "Test", LastName = "Test", PhoneNumber = "123456789" };
+            var passenger = new Passenger() { PassengerId = Convert.ToInt32(DateTime.Now.Ticks.ToString()), FirstName = "Meet", LastName = "Shah", PhoneNumber = "9664560601" };
             return passenger;
         }
     }

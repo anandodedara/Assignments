@@ -4,3 +4,9 @@ G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.M
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.dll
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.pdb
 G:\VSCode Project\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.csprojAssemblyReference.cache
+D:\.NET Assignments\Assignments\Web Api Final Assignment\HMS.WebApi\HMS.Models\bin\Debug\HMS.Models.dll
+D:\.NET Assignments\Assignments\Web Api Final Assignment\HMS.WebApi\HMS.Models\bin\Debug\HMS.Models.pdb
+D:\.NET Assignments\Assignments\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.csprojAssemblyReference.cache
+D:\.NET Assignments\Assignments\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.csproj.CoreCompileInputs.cache
+D:\.NET Assignments\Assignments\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.dll
+D:\.NET Assignments\Assignments\Web Api Final Assignment\HMS.WebApi\HMS.Models\obj\Debug\HMS.Models.pdb

@@ -1,0 +1,66 @@
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\csc.exe
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\vbc.exe
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.Tests.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.Tests.pdb
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.abstractions.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.assert.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.core.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.execution.desktop.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.pdb
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.dll.config
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.assert.xml
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.core.xml
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.execution.desktop.xml
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.csprojAssemblyReference.cache
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.csproj.CoreCompileInputs.cache
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.csproj.CopyComplete
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.pdb
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.runner.reporters.net452.dll
+D:\testing assignment\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.runner.utility.net452.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\csc.exe
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\vbc.exe
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.runner.reporters.net452.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.runner.utility.net452.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.abstractions.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.Tests.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.Tests.pdb
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.assert.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.core.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.execution.desktop.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.pdb
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\assignment2.dll.config
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.assert.xml
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.core.xml
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\bin\Debug\xunit.execution.desktop.xml
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.csprojAssemblyReference.cache
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.csproj.CoreCompileInputs.cache
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.csproj.CopyComplete
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.dll
+D:\testing-assignment-master\Testing assignment 2\assignment2\assignment2.Tests\obj\Debug\assignment2.Tests.pdb
