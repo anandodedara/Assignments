@@ -13,5 +13,7 @@ namespace HMS.BLL.Interface
         string CreateRoom(Room room);
         IQueryable<Room> GetRooms(string city = null, int? pincode = 0, decimal? price = 0, Room.RoomCategory category = 0);
         bool CheckAvailability(int roomId, DateTime date);
+
+        IQueryable<Room> GetAllRooms();
     }
 }

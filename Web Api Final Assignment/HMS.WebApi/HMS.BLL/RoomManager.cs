@@ -20,7 +20,8 @@ namespace HMS.BLL
 
         public bool CheckAvailability(int roomId, DateTime date)
         {
-            return _roomRepository.CheckAvailability(roomId, date);
+            bool isAvailable = _roomRepository.CheckAvailability(roomId, date);
+            return isAvailable;
         }
 
         public string CreateRoom(Room room)
@@ -36,6 +37,10 @@ namespace HMS.BLL
         public IQueryable<Room> GetRooms(string city = null, int? pincode = 0, decimal? price = 0, Room.RoomCategory category = Room.RoomCategory.Cat0)
         {
             return _roomRepository.GetRooms(city,pincode,price,category);
+        }
+
+        public IQueryable<Room> GetAllRooms() {
+            return _roomRepository.GetAllRooms();
         }
     }
 }
